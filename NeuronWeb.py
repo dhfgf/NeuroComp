@@ -10,7 +10,8 @@ class FullyConnectedWeb:
 
     def activate(self):
         for i in range(self.cycles_count):
-            new_input = copy(self.input)
+            # new_input = copy(self.input)
+            new_input = self.input
             for j in range(len(self.neurons)):
                 new_input[j] = self.neurons[j].activate(self.input)
             self.input = new_input

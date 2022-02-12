@@ -1,10 +1,17 @@
+import random
+
 class Neuron:
-    def __init__(self, func):
+    def __init__(self, func, len):
         self.func = func
-        self.w = [1, 1, 1, 1, 1]
-        self.b = 0
+        self.w = []
+        for i in range(len):
+            self.w.append(random.uniform(1, 2))
+        self.b = random.uniform(1, 2)
+        self.len = len
 
     def activate(self, x: list):
+        if len(x) != self.len:
+            raise ValueError('Длины не совпадают')
         return self.func(self.w, x, self.b)
 
 
