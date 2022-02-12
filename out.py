@@ -1,5 +1,6 @@
 from Neuron import *
-from NeuronWeb import *
+from FullyConnectedWeb import *
+from LayerWeb import *
 
 x = [1, 2, 3, 4, 5]
 
