@@ -3,16 +3,16 @@ from Neuron import *
 
 
 class LayerInfo:
-    def __init__(self, func, neuron_count):
+    def __init__(self, func: str, neuron_count):
         self.func = func
         self.neuron_count = neuron_count
 
 
-class LayerWeb:
+class LayeredNeuralNet:
     def __init__(self, input: list, layers_count: int, *layers: LayerInfo):
         self.input = input
         self.layers_count = layers_count
-        self.neuron_layers = []  # лист листов со сгенерированными нейронами
+        self.neuron_layers = []
         input_len = len(self.input)
         for cur_layer in range(self.layers_count):
             neurons = []
