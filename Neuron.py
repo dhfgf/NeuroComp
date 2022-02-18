@@ -3,7 +3,7 @@ import random
 
 class Neuron:
     def __init__(self, func, len):
-        """Neuron with specified function and input length
+        """Creates neuron with specified function and input length
 
         Parameters:
             func (str): neuron function type
